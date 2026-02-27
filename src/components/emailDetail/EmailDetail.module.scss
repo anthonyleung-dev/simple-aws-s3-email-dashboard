@@ -1,0 +1,19 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.detail {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.toolbar {
+    @include flex-between;
+    margin-bottom: $spacing-lg;
+}
+
+.content {
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    overflow: hidden;
+}

@@ -1,0 +1,81 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.toast {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-md $spacing-lg;
+    border-radius: $radius-md;
+    box-shadow: $shadow-md;
+    background-color: $color-surface;
+    border-left: 4px solid;
+    min-width: 280px;
+    max-width: 420px;
+    animation: slideIn $transition-normal forwards;
+}
+
+.success {
+    border-left-color: $color-success;
+}
+
+.error {
+    border-left-color: $color-danger;
+}
+
+.info {
+    border-left-color: $color-primary;
+}
+
+.icon {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    flex-shrink: 0;
+}
+
+.success .icon {
+    color: $color-success;
+}
+
+.error .icon {
+    color: $color-danger;
+}
+
+.info .icon {
+    color: $color-primary;
+}
+
+.message {
+    flex: 1;
+    font-size: $font-size-sm;
+    color: $color-text;
+    line-height: $line-height-normal;
+}
+
+.dismiss {
+    background: none;
+    border: none;
+    color: $color-text-secondary;
+    cursor: pointer;
+    padding: $spacing-xs;
+    font-size: $font-size-xs;
+    line-height: 1;
+    flex-shrink: 0;
+    border-radius: $radius-sm;
+    transition: color $transition-fast;
+
+    &:hover {
+        color: $color-text;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

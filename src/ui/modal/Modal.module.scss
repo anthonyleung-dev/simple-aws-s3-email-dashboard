@@ -1,0 +1,61 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    @include flex-center;
+}
+
+.modal {
+    background-color: $color-surface;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+    width: 90%;
+    max-width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    @include scrollbar-thin;
+}
+
+.header {
+    @include flex-between;
+    padding: $spacing-lg $spacing-xl;
+    border-bottom: 1px solid $color-border;
+}
+
+.title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $color-text;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+    cursor: pointer;
+    padding: $spacing-xs;
+    line-height: 1;
+    border-radius: $radius-sm;
+    transition: color $transition-fast, background-color $transition-fast;
+
+    &:hover {
+        color: $color-text;
+        background-color: $color-bg;
+    }
+
+    &:focus-visible {
+        @include focus-ring;
+    }
+}
+
+.body {
+    padding: $spacing-xl;
+}

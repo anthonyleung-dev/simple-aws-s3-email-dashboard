@@ -1,0 +1,59 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.item {
+    padding: $spacing-lg;
+    border-bottom: 1px solid $color-border;
+    cursor: pointer;
+    transition: background-color $transition-fast;
+
+    &:hover {
+        background-color: $color-bg;
+    }
+
+    &:focus-visible {
+        @include focus-ring;
+    }
+}
+
+.top {
+    @include flex-between;
+    margin-bottom: $spacing-xs;
+}
+
+.from {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+    color: $color-text;
+    @include truncate-text;
+    max-width: 70%;
+}
+
+.date {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+    flex-shrink: 0;
+    margin-left: $spacing-sm;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-xs;
+}
+
+.subject {
+    font-size: $font-size-sm;
+    color: $color-text;
+    @include truncate-text;
+    flex: 1;
+    min-width: 0;
+}
+
+.snippet {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+    line-height: $line-height-normal;
+    @include truncate-multiline(2);
+}

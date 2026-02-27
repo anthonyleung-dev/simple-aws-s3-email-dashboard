@@ -1,0 +1,15 @@
+@use '../styles/variables' as *;
+
+.page {
+    padding: $spacing-xl 0;
+}
+
+.header {
+    margin-bottom: $spacing-xl;
+}
+
+.title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-text;
+}

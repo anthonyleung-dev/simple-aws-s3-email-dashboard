@@ -1,0 +1,39 @@
+@use '@/styles/variables' as *;
+
+.header {
+    padding: $spacing-xl;
+    border-bottom: 1px solid $color-border;
+}
+
+.subject {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-text;
+    margin-bottom: $spacing-lg;
+    word-break: break-word;
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+}
+
+.field {
+    display: flex;
+    gap: $spacing-sm;
+    font-size: $font-size-sm;
+    line-height: $line-height-normal;
+}
+
+.label {
+    font-weight: $font-weight-semibold;
+    color: $color-text-secondary;
+    flex-shrink: 0;
+    min-width: 40px;
+}
+
+.value {
+    color: $color-text;
+    word-break: break-word;
+}

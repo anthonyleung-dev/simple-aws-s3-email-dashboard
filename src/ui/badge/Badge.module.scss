@@ -1,0 +1,39 @@
+@use 'sass:color';
+@use '@/styles/variables' as *;
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px $spacing-sm;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-tight;
+    border-radius: $radius-full;
+    white-space: nowrap;
+}
+
+.default {
+    background-color: $color-bg;
+    color: $color-text-secondary;
+    border: 1px solid $color-border;
+}
+
+.primary {
+    background-color: rgba($color-primary, 0.1);
+    color: $color-primary;
+}
+
+.success {
+    background-color: rgba($color-success, 0.1);
+    color: $color-success;
+}
+
+.warning {
+    background-color: rgba($color-warning, 0.1);
+    color: color.adjust($color-warning, $lightness: -10%);
+}
+
+.danger {
+    background-color: rgba($color-danger, 0.1);
+    color: $color-danger;
+}

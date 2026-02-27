@@ -1,0 +1,67 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.searchBar {
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    padding: $spacing-lg;
+    margin-bottom: $spacing-lg;
+}
+
+.inputRow {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+}
+
+.searchIcon {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+    flex-shrink: 0;
+}
+
+.input {
+    flex: 1;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+    background-color: $color-bg;
+    transition: border-color $transition-fast;
+
+    &::placeholder {
+        color: $color-text-secondary;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $color-primary;
+    }
+}
+
+.fields {
+    display: flex;
+    gap: $spacing-lg;
+    margin-top: $spacing-sm;
+    padding-top: $spacing-sm;
+}
+
+.fieldLabel {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        color: $color-text;
+    }
+}
+
+.checkbox {
+    cursor: pointer;
+    accent-color: $color-primary;
+}
