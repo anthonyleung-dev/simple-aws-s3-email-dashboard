@@ -1,0 +1,53 @@
+@use '@/styles/variables' as *;
+
+.attachments {
+    padding: $spacing-xl;
+    border-top: 1px solid $color-border;
+}
+
+.title {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text;
+    margin-bottom: $spacing-md;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    padding: $spacing-sm $spacing-md;
+    background-color: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    font-size: $font-size-sm;
+}
+
+.fileIcon {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+    flex-shrink: 0;
+}
+
+.filename {
+    flex: 1;
+    color: $color-text;
+    word-break: break-word;
+}
+
+.size {
+    font-size: $font-size-xs;
+    color: $color-text-secondary;
+    flex-shrink: 0;
+}
+
+.downloadButton {
+    flex-shrink: 0;
+    margin-left: auto;
+}
